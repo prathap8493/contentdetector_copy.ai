@@ -1,0 +1,22 @@
+.header_container {
+  font-family: nunito;
+  margin: 30px var(--horizontal-spacing-lg);
+}
+.logo {
+  object-fit: "contain";
+  user-select: none;
+  width: 23%;
+}
+@media screen and (max-width: 1020px) {
+  .logo {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_container {
+    margin: 30px var(--horizontal-spacing-sm) 20px;
+  }
+  .logo {
+    width: 50%;
+  }
+}
