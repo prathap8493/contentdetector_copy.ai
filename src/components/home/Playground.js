@@ -92,7 +92,13 @@ function Playground({ styles }) {
         </div>
         <div className={styles.action_container}>
           <Button
-            className={styles.analyse_btn}
+            className={
+              loading
+                ? `${styles.analyse_btn} ${styles.analyse_btn_disabled}`
+                : content?.length > 0
+                ? styles.analyse_btn
+                : `${styles.analyse_btn} ${styles.analyse_btn_disabled}`
+            }
             onClick={analiseContent}
             disabled={loading ? true : content?.length > 0 ? false : true}
           >
