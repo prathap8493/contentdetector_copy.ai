@@ -3,7 +3,6 @@ import { testimonials } from "@/data/home";
 import { Rating } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import Slider from "react-slick";
 import image from "../../assests/png/solution_img.png";
 import circle from "../../assests/svgs/circle-creative.svg";
 import square from "../../assests/svgs/square-creative.svg";
