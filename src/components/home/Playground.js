@@ -4,7 +4,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import Lottie from "lottie-react";
 import toast from "react-hot-toast";
 import { Button, LinearProgress } from "@mui/material";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../common/ProgressBar";
 import loader from "../../assests/json/loading.json";
 import { aiDetectionService } from "@/services/home";
 function Playground({ styles }) {
@@ -55,7 +55,7 @@ function Playground({ styles }) {
     }
   };
   return (
-    <div className={styles.playground_container}>
+    <div className={`${styles.playground_container} ${styles.layout_spacing}`}>
       <div className={styles.editor_container}>
         <div className={styles.text_editor_container}>
           <div>
@@ -76,7 +76,7 @@ function Playground({ styles }) {
 
           <div className={styles.editor_menu}>
             {/* word count */}
-            <div className={styles.word_count}>
+            <div className={styles.word_count_lg}>
               Word Count: {getWordCount()}
             </div>
             {/* copy clear */}
@@ -104,7 +104,10 @@ function Playground({ styles }) {
           >
             {loading ? "Loading..." : "Analyse"}
           </Button>
-          <div className={styles.response_container_sm}>
+          <div className={styles.word_count_sm}>
+            Word Count: {getWordCount()}
+          </div>
+          {/* <div className={styles.response_container_sm}>
             {loading ? (
               // <Lottie className={styles.loader} animationData={loader} />
               <div className={styles.loader}>
@@ -114,7 +117,7 @@ function Playground({ styles }) {
               <p className={styles.ai_percentage}>{percenage}%</p>
             )}
             <p className={styles.ai_sub_text}>Match with Ai</p>
-          </div>
+          </div> */}
         </div>
       </div>
 

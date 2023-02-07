@@ -5,8 +5,9 @@ function ProgressBar({ percenage, loading }) {
   console.log(loading);
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 15,
-    width: "70%",
+    width: "80%",
     borderRadius: 10,
+    marginTop: "10px",
     boxShadow: "1px 2px 3px #00000029",
     [`&.${linearProgressClasses.colorPrimary}`]: {
       backgroundColor: "var(--text-white)",

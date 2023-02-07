@@ -1,6 +1,6 @@
 :root {
   --horizontal-spacing-lg: 10%;
-  --horizontal-spacing-sm: 7%;
+  --horizontal-spacing-sm: 4%;
   --text-primary: #000;
   --text-seconday: #585858;
   --text-white: #fff;
@@ -8,6 +8,13 @@
   --text-danger: #b83a34;
   --btn-bg-primary: #eb661e;
   --progress-bar-color: #d04b45;
+  --background-primary: #fffefc;
+  --background-secondary: #faf9f7;
+  --box-shadow: #00000029;
+  --divider-color: #707070;
+  --footer-bg: #111518;
+  --footer-text: #6c737d;
+  --footer-divider: rgba(255, 255, 255, 0.1);
 }
 
 @font-face {
@@ -21,6 +28,12 @@
   src: url("../assests/fonts/nunito/NunitoSans-Regular.ttf");
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: "nunito";
+  src: url("../assests/fonts/nunito/NunitoSans-black.ttf");
+  font-weight: 800;
+  font-style: 800;
 }
 @font-face {
   font-family: "metropolis";
@@ -90,6 +103,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: var(--background-primary);
 }
 
 a {
@@ -97,10 +111,43 @@ a {
   text-decoration: none;
 }
 main {
-  margin: auto var(--horizontal-spacing-lg);
+  position: relative;
+  margin-top: 15vh;
+}
+.footer_container {
+  padding: 10px;
+  background-color: var(--footer-bg);
+}
+.footer_layout {
+  margin: 20px 5% 0px;
+  font-family: nunito;
+}
+.footer_menu {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer_menu_item {
+  margin: 10px 20px 10px 0;
+  font-family: nunito;
+  font-weight: bold;
+  color: var(--footer-text);
+  cursor: pointer;
+}
+.footer_menu_item:hover {
+  color: var(--text-white);
+}
+
+.copyrights {
+  padding: 10px;
+  color: var(--footer-text);
+  border-top: 1px solid var(--footer-divider);
 }
 @media screen and (max-width: 768px) {
   main {
-    margin: auto var(--horizontal-spacing-sm);
+    margin-top: 9vh;
   }
 }

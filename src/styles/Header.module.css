@@ -1,9 +1,15 @@
 .header_container {
+  position: fixed;
+  width: 100dvw;
+  top: 0;
   font-family: nunito;
-  margin: 30px var(--horizontal-spacing-lg);
+  padding: 0 var(--horizontal-spacing-lg);
+  padding-top: 30px;
+  height: 15vh;
+  background-color: var(--text-white);
+  z-index: 10;
 }
 .logo {
-  object-fit: "contain";
   user-select: none;
   width: 23%;
 }
@@ -14,9 +20,16 @@
 }
 @media screen and (max-width: 768px) {
   .header_container {
-    margin: 30px var(--horizontal-spacing-sm) 20px;
+    height: 9vh;
+    padding: 0px;
+    display: flex;
+    align-items: center;
   }
   .logo {
+    position: relative;
+    object-fit: "cover";
     width: 50%;
+    display: block;
+    margin: auto;
   }
 }

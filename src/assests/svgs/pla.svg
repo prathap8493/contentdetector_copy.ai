@@ -1,0 +1,11 @@
+<svg id="plagiarism" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55.421" height="55.421" viewBox="0 0 55.421 55.421">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_9240" data-name="Path 9240" d="M0,0H55.421V55.421H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="plagiarism-2" data-name="plagiarism" clip-path="url(#clip-path)">
+    <path id="Path_9238" data-name="Path 9238" d="M39.585,14.493,28.431,3.339A4.614,4.614,0,0,0,25.175,2H8.618A4.632,4.632,0,0,0,4,6.618V43.566a4.632,4.632,0,0,0,4.618,4.618h27.71a4.632,4.632,0,0,0,4.618-4.618V17.772A4.633,4.633,0,0,0,39.585,14.493ZM31.11,40.656a2.3,2.3,0,0,1-3.256,0l-2.725-2.725a8.085,8.085,0,1,1,3.256-3.256L31.11,37.4A2.3,2.3,0,0,1,31.11,40.656ZM27.092,18.164a2.316,2.316,0,0,1-2.309-2.309V5.464l12.7,12.7Z" transform="translate(5.237 2.618)" fill="#eb661e"/>
+    <path id="Path_9239" data-name="Path 9239" d="M13.464,19.928A3.464,3.464,0,1,0,10,16.464,3.464,3.464,0,0,0,13.464,19.928Z" transform="translate(13.092 17.02)" fill="#eb661e"/>
+  </g>
+</svg>
