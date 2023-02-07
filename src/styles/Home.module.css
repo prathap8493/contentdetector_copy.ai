@@ -46,9 +46,13 @@
   border-radius: 10px;
   margin-bottom: 5px;
 }
+
 .text_editor {
   position: relative;
   width: 100%;
+  height: 100%;
+  min-height: calc(60vh - 7vh);
+
   margin-bottom: 7vh;
 }
 .text_editor:focus {
