@@ -5,7 +5,7 @@ function OurMotive({ styles }) {
   return (
     <div className={styles.margin_vertical_md}>
       <div
-        className={`${styles.secondary_bg_container_70} ${styles.flex_center_start_column_wrap}`}
+        className={`${styles.primary_bg_container_70} ${styles.flex_center_start_column_wrap}`}
       >
         <div
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
@@ -34,7 +34,9 @@ function OurMotive({ styles }) {
         </div>
       </div>
 
-      <div className={` ${styles.flex_center_start_column_wrap}`}>
+      <div
+        className={`${styles.secondary_bg} ${styles.flex_center_start_column_wrap}`}
+      >
         <div
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
         >
@@ -57,7 +59,7 @@ function OurMotive({ styles }) {
       </div>
 
       <div
-        className={`${styles.secondary_bg_container_70} ${styles.flex_center_start_column_wrap}`}
+        className={`${styles.primary_bg_container_70} ${styles.flex_center_start_column_wrap}`}
       >
         <div
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
@@ -87,7 +89,9 @@ function OurMotive({ styles }) {
         </div>
       </div>
 
-      <div className={` ${styles.flex_center_start_column_wrap}`}>
+      <div
+        className={`${styles.secondary_bg} ${styles.flex_center_start_column_wrap}`}
+      >
         <div
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
         >
@@ -105,32 +109,6 @@ function OurMotive({ styles }) {
               which target spam content. However AI written content might or
               might not be spam and it totally depending how the AI tool is
               used.
-            </p>
-
-            {/* <Button className={styles.analyse_btn}>Read more</Button> */}
-          </div>
-        </div>
-      </div>
-      <div
-        className={`${styles.secondary_bg_container_70} ${styles.flex_center_start_column_wrap}`}
-      >
-        <div
-          className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
-        >
-          <p className={`${styles.sub_heading} ${styles.margin_horizontal_md}`}>
-            AI Detector for Academicians
-          </p>
-          <div className={styles.layout_spacing}>
-            <p className={styles.section_desc}>
-              Academicians and Universities can use the tool to check the essays
-              submitted by students are authentic or not. Just copy paste the
-              content into the text box and click on analyse to detect any fake
-              content. This can be a very handy free tool for education
-              especially for teacher.
-            </p>
-            <p className={styles.section_desc}>
-              ContentDetector.AI also acts a simple word counter. Just copy
-              paste the text to know the number of words are in the text
             </p>
 
             {/* <Button className={styles.analyse_btn}>Read more</Button> */}

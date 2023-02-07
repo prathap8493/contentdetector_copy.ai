@@ -26,8 +26,10 @@ export default function Home() {
       <HomeHeading styles={styles} />
       <Playground styles={styles} />
       {/* <Features styles={styles} /> */}
+
       <OurMotive styles={styles} />
-      {/* <SectionFour styles={styles} /> */}
+      <SectionFour styles={styles} />
+
       {/* <UseCases styles={styles} /> */}
       <Testimonials styles={styles} />
       <Faq styles={styles} />

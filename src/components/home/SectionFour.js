@@ -9,7 +9,7 @@ function SectionFour({ styles }) {
   return (
     <div>
       <div
-        className={`${styles.primary_bg_container_70} ${styles.flex_center_center_wrap} ${styles.margin_vertical_lg}`}
+        className={`${styles.primary_bg_container_70} ${styles.flex_center_center_wrap} ${styles.margin_vertical_lg} ${styles.padding_vertical_lg}`}
       >
         <div className={styles.section_creative_container}>
           <Image
@@ -31,16 +31,21 @@ function SectionFour({ styles }) {
         <div
           className={`${styles.section_content_container} ${styles.margin_top_md}`}
         >
-          <p className={styles.sub_heading}>
-            We bring solutions to make life easier for our customers.
+          <p className={styles.sub_heading}>AI Detector for Academicians</p>
+          <p className={styles.section_desc}>
+            Academicians and Universities can use the tool to check the essays
+            submitted by students are authentic or not. Just copy paste the
+            content into the text box and click on analyse to detect any fake
+            content. This can be a very handy free tool for education especially
+            for teacher.
           </p>
           <p className={styles.section_desc}>
-            ChatGPT which is based on OpenAI GPT 3.5 is a big leap forward in
-            terms of features. We will be able to detect any
+            ContentDetector.AI also acts a simple word counter. Just copy paste
+            the text to know the number of words are in the text
           </p>
-          <Button className={`${styles.analyse_btn} ${styles.margin_top_md}`}>
+          {/* <Button className={`${styles.analyse_btn} ${styles.margin_top_md}`}>
             Analyse
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>
