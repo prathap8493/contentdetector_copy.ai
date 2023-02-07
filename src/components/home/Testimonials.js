@@ -61,7 +61,7 @@ function Testimonials({ styles }) {
                 <Image
                   className={styles.testimonial_user_img}
                   src={image}
-                  aly="image"
+                  alt="image"
                 />
                 <p className={styles.testimonial_user_name}>{item.user}</p>
               </div>
