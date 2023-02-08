@@ -12,7 +12,7 @@ function Footer() {
           <Link
             href="/contact"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             className="footer_menu_item"
           >
             CONTACT
@@ -20,7 +20,7 @@ function Footer() {
           <Link
             href="/privacy-policy"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             className="footer_menu_item"
           >
             PRIVACY POLICY
@@ -28,7 +28,7 @@ function Footer() {
           <Link
             href="/terms"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             className="footer_menu_item"
           >
             TERMS & CONDITIONS

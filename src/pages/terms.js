@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 function Terms() {
   return (
@@ -11,9 +12,13 @@ function Terms() {
         <p className={styles.padding_bottom_sm}>
           Throughout the site, the terms “we”, “us” and “our” refer to the
           website{" "}
-          <a className={styles.link_style} href="https://contentdetector.ai">
+          <Link
+            className={styles.link_style}
+            href="https://contentdetector.ai"
+            rel="noreferrer"
+          >
             https://contentdetector.ai
-          </a>
+          </Link>
           . We offers this website, including all information, tools and
           services available from this site to you, the user, conditioned upon
           your acceptance of all terms, conditions, policies and notices stated
@@ -509,12 +514,13 @@ function Terms() {
           </p>
           <p>
             Questions about the Terms of Service should be sent to us at{" "}
-            <a
+            <Link
               className={styles.link_style}
               href="mailto:hello@contentdetector.ai"
+              rel="noreferrer"
             >
               hello@contentdetector.ai
-            </a>
+            </Link>
           </p>
         </div>
       </div>

@@ -103,7 +103,7 @@ function privacyPolicy() {
             className={styles.link_style}
             href="https://www.google.com/intl/en/policies/privacy/"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             https://www.google.com/intl/en/policies/privacy/
           </a>
@@ -112,7 +112,7 @@ function privacyPolicy() {
             className={styles.link_style}
             href="https://tools.google.com/dlpage/gaoptout"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             https://tools.google.com/dlpage/gaoptout
           </a>
@@ -134,7 +134,7 @@ function privacyPolicy() {
             className={styles.link_style}
             href="http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work
           </a>
@@ -151,7 +151,7 @@ function privacyPolicy() {
             className={styles.link_style}
             href="https://www.facebook.com/settings/?tab=ads"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             https://www.facebook.com/settings/?tab=ads
           </a>
@@ -162,7 +162,7 @@ function privacyPolicy() {
             className={styles.link_style}
             href="https://www.google.com/settings/ads/anonymous"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             https://www.google.com/settings/ads/anonymous
           </a>
@@ -173,7 +173,7 @@ function privacyPolicy() {
             className={styles.link_style}
             href="https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads
           </a>
@@ -185,7 +185,7 @@ function privacyPolicy() {
             className={styles.link_style}
             href="http://optout.aboutads.info/"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             http://optout.aboutads.info/
           </a>
