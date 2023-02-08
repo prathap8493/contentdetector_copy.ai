@@ -1,6 +1,9 @@
 import gpt from "../assests/svgs/gpt.svg";
 import ai from "../assests/svgs/ai.svg";
 import pla from "../assests/svgs/pla.svg";
+import avatar1 from "../assests/png/avatar1.png";
+import avatar2 from "../assests/png/avatar2.png";
+import avatar3 from "../assests/png/avatar3.png";
 export const features = [
   {
     img: gpt,
@@ -90,16 +93,22 @@ export const testimonial_settings = {
 export const testimonials = [
   {
     id: 1,
+    rating: "5",
+    avatar: avatar1,
     user: "Alissa Peterson",
     desc: "This tool has been a lifesaver for my blog. It’s easy to use and has helped me catch instances of AI-Generated content from my writers and improve the overall quality of my content",
   },
   {
     id: 2,
+    rating: "4",
+    avatar: avatar2,
     user: "Anna Clarck",
     desc: "Whether I’m checking a single paragraph or a single URL or an entire website, contentdetector.ai covers everything",
   },
   {
     id: 3,
+    rating: "4.5",
+    avatar: avatar3,
     user: "Olindra Gotham",
     desc: "It’s amazing that tools detect both plagiarised content as well AI content. I would highly recommend for anyone which is serious about production high quality original content",
   },

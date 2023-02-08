@@ -9,7 +9,7 @@ function SectionFour({ styles }) {
   return (
     <div>
       <div
-        className={`${styles.primary_bg_container_70} ${styles.flex_center_center_wrap} ${styles.margin_vertical_lg} ${styles.padding_vertical_lg}`}
+        className={`${styles.secondary_bg_container_70} ${styles.flex_center_center_wrap} ${styles.padding_vertical_lg}`}
       >
         <div className={styles.section_creative_container}>
           <Image

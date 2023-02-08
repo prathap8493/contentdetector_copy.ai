@@ -5,7 +5,7 @@ function ProgressBar({ percenage, loading }) {
   console.log(loading);
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 15,
-    width: "80%",
+    width: "85%",
     borderRadius: 10,
     marginTop: "10px",
     boxShadow: "1px 2px 3px #00000029",
@@ -20,7 +20,7 @@ function ProgressBar({ percenage, loading }) {
   return (
     <BorderLinearProgress
       variant={loading ? "indeterminate" : "determinate"}
-      value={percenage}
+      value={parseInt(percenage)}
     />
   );
 }

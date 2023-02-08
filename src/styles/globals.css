@@ -15,6 +15,7 @@
   --footer-bg: #111518;
   --footer-text: #6c737d;
   --footer-divider: rgba(255, 255, 255, 0.1);
+  --text-editor-min-height: 60vh;
 }
 
 @font-face {
@@ -97,6 +98,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: nunito;
 }
 
 html,
@@ -129,11 +131,12 @@ main {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 16px;
 }
 .footer_menu_item {
   margin: 10px 20px 10px 0;
   font-family: nunito;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--footer-text);
   cursor: pointer;
 }
@@ -146,8 +149,50 @@ main {
   color: var(--footer-text);
   border-top: 1px solid var(--footer-divider);
 }
+.contact_form {
+  height: calc(100vh);
+  margin: 0 var(--horizontal-spacing-lg);
+  margin-top: -90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  flex-direction: column;
+}
+.contact_title {
+  margin: 10px 0;
+  color: var(--btn-bg-primary);
+}
+
+/* text editor stylings */
+.ql-editor {
+  padding: 0 !important;
+  min-height: calc(60vh - 7vh) !important;
+  margin-left: 8px;
+  /* font-size: ; */
+}
+.ql-container {
+  border: none !important;
+}
+.ql-editor.ql-blank::before {
+  left: 0 !important;
+  font-style: normal !important;
+  margin-left: 8px;
+}
+.ql-toolbar.ql-snow {
+  padding: 0 !important;
+  border: 0 !important;
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 768px) {
   main {
     margin-top: 9vh;
+  }
+  .contact_form {
+    margin: 0 var(--horizontal-spacing-sm);
+
+    margin-top: -70px;
+    font-size: 1.3rem;
   }
 }

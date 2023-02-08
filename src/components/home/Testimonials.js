@@ -38,7 +38,7 @@ function Testimonials({ styles }) {
 
   return (
     <div
-      className={`${styles.primary_bg_container_70} ${styles.flex_center_start_column_wrap} ${styles.padding_vertical_lg}`}
+      className={`${styles.secondary_bg_container_70} ${styles.flex_center_start_column_wrap} ${styles.padding_vertical_lg}`}
     >
       <p className={`${styles.sub_heading} ${styles.margin_horizontal_md}`}>
         Testimonials
@@ -47,19 +47,19 @@ function Testimonials({ styles }) {
         <Image className={styles.feature_circle} src={square} alt="cd" />
         <Image className={styles.feature_square} src={circle} alt="cd" />
         <div
-          className={`${styles.testimonials} ${styles.flex_center_center_wrap} ${styles.margin_vertical_md} `}
+          className={`${styles.testimonials}  ${styles.margin_vertical_md} `}
         >
           {/* <Slider {...testimonial_settings}> */}
           {testimonials.map((item) => (
             <div className={styles.testimonial_card} key={item.id}>
               <p className={styles.testimonial_rating}>
-                <Rating value={5} readOnly />
+                <Rating value={item.rating} readOnly precision={0.5} />
               </p>
               <p className={styles.testimonial_desc}>{item.desc}</p>
               <div className={styles.testimonial_user}>
                 <Image
                   className={styles.testimonial_user_img}
-                  src={image}
+                  src={item.avatar}
                   alt="image"
                 />
                 <p className={styles.testimonial_user_name}>{item.user}</p>

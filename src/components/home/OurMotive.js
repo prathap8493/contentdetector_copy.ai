@@ -1,12 +1,11 @@
 import { Button } from "@mui/material";
 import React from "react";
+import Testimonials from "./Testimonials";
 
 function OurMotive({ styles }) {
   return (
-    <div className={styles.margin_vertical_md}>
-      <div
-        className={`${styles.primary_bg_container_70} ${styles.flex_center_start_column_wrap}`}
-      >
+    <div>
+      <div className={`${styles.primary_bg} `}>
         <div
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
         >
@@ -33,10 +32,9 @@ function OurMotive({ styles }) {
           </div>
         </div>
       </div>
+      <Testimonials styles={styles} />
 
-      <div
-        className={`${styles.secondary_bg} ${styles.flex_center_start_column_wrap}`}
-      >
+      <div className={`${styles.primary_bg}`}>
         <div
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
         >
@@ -58,9 +56,7 @@ function OurMotive({ styles }) {
         </div>
       </div>
 
-      <div
-        className={`${styles.primary_bg_container_70} ${styles.flex_center_start_column_wrap}`}
-      >
+      <div className={`${styles.secondary_bg}`}>
         <div
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
         >
@@ -89,9 +85,7 @@ function OurMotive({ styles }) {
         </div>
       </div>
 
-      <div
-        className={`${styles.secondary_bg} ${styles.flex_center_start_column_wrap}`}
-      >
+      <div className={`${styles.primary_bg} `}>
         <div
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
         >

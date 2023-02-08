@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useQuill } from "react-quilljs";
 import { BiCopy } from "react-icons/bi";
 import { MdDeleteOutline } from "react-icons/md";
 import Lottie from "lottie-react";
@@ -7,19 +8,34 @@ import { Button, LinearProgress } from "@mui/material";
 import ProgressBar from "../common/ProgressBar";
 import loader from "../../assests/json/loading.json";
 import { aiDetectionService } from "@/services/home";
+import TextEditor from "../common/TextEditor";
 function Playground({ styles }) {
+  const formats = ["bold", "italic", "underline", "strike"];
+  const modules = {
+    toolbar: [
+      ["bold", "italic", "underline", "strike"],
+      [{ list: "ordered" }, { list: "bullet" }],
+      [{ header: [1, 2, 3, 4, 5, 6, false] }],
+    ],
+  };
+  const placeholder = "Paste Text or Write Here";
+  const { quill, quillRef } = useQuill({ formats, modules, placeholder });
   const [content, setContent] = useState("");
   const [percenage, setPercenage] = useState(0);
   const [loading, setLoading] = useState(false);
   const editorRef = useRef(null);
-
   useEffect(() => {
-    editorRef.current.focus();
-  }, []);
-
+    if (quill) {
+      quill.on("text-change", (delta, oldDelta, source) => {
+        setContent(quill.getText());
+      });
+    }
+  }, [quill]);
+  console.log(content);
   //   handling copy
   const handleCopy = () => {
-    if (content.length > 0) {
+    console.log(content);
+    if (content.length > 1) {
       navigator.clipboard.writeText(content);
       toast.success("Copied to clipboard", { duration: 1500 });
     } else {
@@ -29,9 +45,10 @@ function Playground({ styles }) {
 
   //   handle clear
   const handleClear = () => {
-    setContent("");
-    editorRef.current.innerText = "";
-    editorRef.current.focus();
+    if (quill) {
+      setContent();
+      quill.deleteText(0, quill.getLength());
+    }
   };
 
   // word count
@@ -60,18 +77,20 @@ function Playground({ styles }) {
         <div className={styles.text_editor_container}>
           <div>
             {/* content place holder */}
-            {content.length === 0 ? (
+            {/* {content.length === 0 ? (
               <p className={styles.text_editor_placeholder}>
                 Paste Text or Write Here
               </p>
-            ) : null}
+            ) : null}{" "} */}
             {/* content editor */}
-            <div
+            <div ref={quillRef} className={styles.text_editor} />
+            {/* <TextEditor
               ref={editorRef}
               className={styles.text_editor}
-              contentEditable="true"
-              onInput={(e) => setContent(e.target.innerText)}
-            />
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              placeholder="Paste Text or Write Here"
+            /> */}
           </div>
 
           <div className={styles.editor_menu}>
@@ -125,7 +144,7 @@ function Playground({ styles }) {
       <div className={styles.response_container}>
         <div className={styles.ai_response}>
           <p className={styles.ai_percentage}>{percenage}%</p>
-          <p className={styles.ai_sub_text}>Match with Ai</p>
+          <p className={styles.ai_sub_text}>Match with AI</p>
           <ProgressBar percenage={percenage} loading={loading} />
         </div>
       </div>

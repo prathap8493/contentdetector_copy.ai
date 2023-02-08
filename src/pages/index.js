@@ -31,7 +31,6 @@ export default function Home() {
       <SectionFour styles={styles} />
 
       {/* <UseCases styles={styles} /> */}
-      <Testimonials styles={styles} />
       <Faq styles={styles} />
     </>
   );
