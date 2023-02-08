@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer_layout">
         <div className="footer_menu">
           <Link href="/" className="footer_menu_item">
-            HOME
+            Home
           </Link>
           <Link
             href="/contact"
@@ -15,7 +15,7 @@ function Footer() {
             rel="noreferrer"
             className="footer_menu_item"
           >
-            CONTACT
+            Contact
           </Link>
           <Link
             href="/privacy-policy"
@@ -23,7 +23,7 @@ function Footer() {
             rel="noreferrer"
             className="footer_menu_item"
           >
-            PRIVACY POLICY
+            Privacy Policy
           </Link>
           <Link
             href="/terms"
@@ -31,7 +31,7 @@ function Footer() {
             rel="noreferrer"
             className="footer_menu_item"
           >
-            TERMS & CONDITIONS
+            Terms & Conditions
           </Link>
         </div>
         <p className="copyrights">Copyright © 2023 ContentDetector.AI</p>

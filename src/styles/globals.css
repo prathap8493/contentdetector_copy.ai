@@ -136,7 +136,7 @@ main {
 .footer_menu_item {
   margin: 10px 20px 10px 0;
   font-family: nunito;
-  font-weight: 600;
+  /* font-weight: 600; */
   color: var(--footer-text);
   cursor: pointer;
 }
