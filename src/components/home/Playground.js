@@ -22,15 +22,18 @@ function Playground({ styles }) {
   const [content, setContent] = useState("");
   const [percenage, setPercenage] = useState(0);
   const [loading, setLoading] = useState(false);
-  const editorRef = useRef(null);
+  const [quillLoading, setQuillLoading] = useState(true);
   useEffect(() => {
     if (quill) {
+      setQuillLoading(false);
+      quill.focus();
       quill.on("text-change", (delta, oldDelta, source) => {
         setContent(quill.getText());
       });
+    } else {
+      setQuillLoading(true);
     }
   }, [quill]);
-  console.log(content);
   //   handling copy
   const handleCopy = () => {
     console.log(content);
@@ -82,7 +85,11 @@ function Playground({ styles }) {
               </p>
             ) : null}{" "} */}
             {/* content editor */}
-            <div ref={quillRef} className={styles.text_editor} />
+            {quillLoading ? (
+              <div ref={quillRef} className={styles.text_editor} />
+            ) : (
+              <div className={styles.text_editor}></div>
+            )}
             {/* <TextEditor
               ref={editorRef}
               className={styles.text_editor}

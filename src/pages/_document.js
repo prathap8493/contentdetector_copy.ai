@@ -11,13 +11,6 @@ export default function Document() {
           crossOrigin=""
           type="font/ttf"
         />
-        <link
-          rel="preload"
-          href="/fonts/nunito/NunitoSans-Regular.ttf"
-          as="font"
-          crossOrigin=""
-          type="font/ttf"
-        />
       </Head>
       <body>
         <Main />
