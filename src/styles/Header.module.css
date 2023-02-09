@@ -1,6 +1,6 @@
 .header_container {
   position: fixed;
-  width: 100dvw;
+  width: 100% !important;
   top: 0;
   font-family: nunito;
   padding: 0 var(--horizontal-spacing-lg);
@@ -21,6 +21,7 @@
 @media screen and (max-width: 768px) {
   .header_container {
     height: 70px;
+    width: 100%;
     padding: 0px;
     display: flex;
     align-items: center;
