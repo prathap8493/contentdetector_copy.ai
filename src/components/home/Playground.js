@@ -65,7 +65,7 @@ function Playground({ styles }) {
       setLoading(false);
       console.log(data);
     } catch (err) {
-      console.log(err.response);
+      console.log(err);
       setLoading(false);
       toast.error("Something went wrong! Try again", { duration: 1300 });
     }
