@@ -20,46 +20,23 @@
 
 @font-face {
   font-family: "nunito";
-  src: url("../assests/fonts/nunito/NunitoSans-ExtraBold.ttf");
+  src: url("/fonts/nunito/NunitoSans-ExtraBold.ttf");
   font-weight: bolder;
   font-style: bolder;
 }
 @font-face {
   font-family: "nunito";
-  src: url("../assests/fonts/nunito/NunitoSans-Regular.ttf");
+  src: url("/fonts/nunito/NunitoSans-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "nunito";
-  src: url("../assests/fonts/nunito/NunitoSans-Black.ttf");
+  src: url("/fonts/nunito/NunitoSans-Black.ttf");
   font-weight: 800;
   font-style: 800;
 }
-@font-face {
-  font-family: "metropolis";
-  src: url("../assests/fonts/metropolis/Metropolis-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "metropolis";
-  src: url("../assests/fonts/metropolis/Metropolis-Medium.ttf");
-  font-weight: medium;
-  font-style: medium;
-}
-@font-face {
-  font-family: "metropolis";
-  src: url("../assests/fonts/metropolis/Metropolis-Bold.ttf");
-  font-weight: bold;
-  font-style: bold;
-}
-@font-face {
-  font-family: "metropolis";
-  src: url("../assests/fonts/metropolis/Metropolis-SemiBold.ttf");
-  font-weight: semiBold;
-  font-style: semiBold;
-}
+
 /* 
 @media (prefers-color-scheme: dark) {
   :root {
