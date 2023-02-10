@@ -48,7 +48,7 @@ function Playground({ styles }) {
   //   handle clear
   const handleClear = () => {
     if (quill) {
-      setContent();
+      setContent("");
       quill.deleteText(0, quill.getLength());
     }
   };
