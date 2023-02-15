@@ -13,13 +13,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          Free AI Content , Chat GPT Plagiarism Detector and Wordcounter
-        </title>
+        <title>Free AI Content Detector - Detect ChatGPT Plagiarism</title>
         <meta
           name="description"
           content="ContentDetector.AI is a free AI and ChatGPT plagiarism detector with a word counter for bloggers academicians"
         />
+        <meta
+          name="keywords"
+          content="AI Content Detector, Chat GPT Plagiarism Detector, Word Counter"
+        ></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -28,7 +30,6 @@ export default function Home() {
       {/* <Features styles={styles} /> */}
 
       <OurMotive styles={styles} />
-      <SectionFour styles={styles} />
 
       {/* <UseCases styles={styles} /> */}
       <Faq styles={styles} />

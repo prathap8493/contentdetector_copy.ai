@@ -55,7 +55,7 @@ export default function Faq({ styles }) {
 
   return (
     <div
-      className={`${styles.primary_bg_container_70} ${styles.padding_horizontal_md} ${styles.padding_vertical_lg}`}
+      className={`${styles.secondary_bg_container_70} ${styles.padding_horizontal_md} ${styles.padding_vertical_lg}`}
     >
       <div className={`${styles.layout_spacing}`}>
         <p className={`${styles.sub_heading} `}>FAQs</p>

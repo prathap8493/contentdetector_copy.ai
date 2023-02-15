@@ -10,7 +10,7 @@ function Footer() {
             Home
           </Link>
           <Link
-            href="/contact"
+            href="/contact/"
             target="_blank"
             rel="noreferrer"
             className="footer_menu_item"
@@ -18,7 +18,7 @@ function Footer() {
             Contact
           </Link>
           <Link
-            href="/privacy-policy"
+            href="/privacy-policy/"
             target="_blank"
             rel="noreferrer"
             className="footer_menu_item"
@@ -26,12 +26,20 @@ function Footer() {
             Privacy Policy
           </Link>
           <Link
-            href="/terms"
+            href="/terms/"
             target="_blank"
             rel="noreferrer"
             className="footer_menu_item"
           >
             Terms & Conditions
+          </Link>
+          <Link
+            href="/articles/"
+            target="_blank"
+            rel="noreferrer"
+            className="footer_menu_item"
+          >
+            Articles
           </Link>
         </div>
         <p className="copyrights">Copyright © 2023 ContentDetector.AI</p>
