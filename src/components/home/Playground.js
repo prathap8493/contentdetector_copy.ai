@@ -16,6 +16,9 @@ function Playground({ styles }) {
       ["bold", "italic", "underline", "strike"],
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
     ],
+    // clipboard: {
+    //   matchVisual: false,
+    // },
   };
   const placeholder = "Paste Text or Write Here";
   const { quill, quillRef } = useQuill({ formats, modules, placeholder });
@@ -86,7 +89,11 @@ function Playground({ styles }) {
             ) : null}{" "} */}
             {/* content editor */}
             {quillLoading ? (
-              <div ref={quillRef} className={styles.text_editor} />
+              <div
+                ref={quillRef}
+                className={styles.text_editor}
+                onChange={(e) => console.log(e)}
+              />
             ) : (
               <div className={styles.text_editor}></div>
             )}

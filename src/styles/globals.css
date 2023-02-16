@@ -147,6 +147,7 @@ main {
   padding: 0 !important;
   min-height: calc(60vh - 7vh) !important;
   margin-left: 8px;
+  white-space: normal !important;
   /* font-size: ; */
 }
 .ql-container {
@@ -162,6 +163,7 @@ main {
   border: 0 !important;
   margin-bottom: 20px;
 }
+
 @media screen and (max-width: 768px) {
   main {
     margin-top: 9vh;
