@@ -8,6 +8,7 @@ import ProgressBar from "../common/ProgressBar";
 import { aiDetectionService } from "@/services/home";
 
 function Playground({ styles }) {
+  const formats = ["header", "size", "bold", "italic", "underline", "strike"];
   const modules = {
     toolbar: [
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -21,8 +22,8 @@ function Playground({ styles }) {
   const placeholder = "Paste Text or Write Here";
   const { quill, quillRef } = useQuill({
     theme,
-
     modules,
+    formats,
     placeholder,
   });
   const [content, setContent] = useState("");
