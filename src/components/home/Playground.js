@@ -1,23 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuill } from "react-quilljs";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-
 import { BiCopy } from "react-icons/bi";
 import { MdDeleteOutline } from "react-icons/md";
-import Lottie from "lottie-react";
 import toast from "react-hot-toast";
-import { Button, LinearProgress } from "@mui/material";
+import { Button } from "@mui/material";
 import ProgressBar from "../common/ProgressBar";
-import loader from "../../assests/json/loading.json";
 import { aiDetectionService } from "@/services/home";
-import TextEditor from "../common/TextEditor";
-import dynamic from "next/dynamic";
-const Editor = dynamic(
-  () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
-  { ssr: false }
-);
+
 function Playground({ styles }) {
-  const formats = ["bold", "italic", "underline", "strike"];
   const modules = {
     toolbar: [
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -38,19 +28,16 @@ function Playground({ styles }) {
   const [content, setContent] = useState("");
   const [percenage, setPercenage] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [editorState, setEditorState] = useState();
-  const [quillLoading, setQuillLoading] = useState(true);
+
   useEffect(() => {
     if (quill) {
-      // setQuillLoading(false);
-      // quill.focus();
+      quill.focus();
       quill.on("text-change", (delta, oldDelta, source) => {
         setContent(quill.getText());
       });
-    } else {
-      // setQuillLoading(true);
     }
   }, [quill]);
+
   //   handling copy
   const handleCopy = () => {
     if (content.length > 1) {
