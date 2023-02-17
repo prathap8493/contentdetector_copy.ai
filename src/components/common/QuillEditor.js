@@ -1,26 +1,32 @@
+import { headers } from "next.config";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
+import { toast } from "react-hot-toast";
 import { BiCopy } from "react-icons/bi";
 import { MdDeleteOutline } from "react-icons/md";
 
 const QuillEditor = dynamic(
   async () => {
     const { default: RQ } = await import("react-quill");
+    return ({ forwardedRef, styles, changeContent, ...props }) => {
+      const modules = {
+        toolbar: [
+          ["bold", "italic", "underline", "strike"],
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+        ],
+        clipboard: {
+          // toggle to add extra line breaks when pasting HTML:
+          matchVisual: false,
+        },
+      };
 
-    return ({
-      forwardedRef,
-      clearAll,
-      styles,
-      content,
-      setContent,
-      ...props
-    }) => {
       useEffect(() => {
         forwardedRef.current.focus();
       }, []);
-      const getWordCount = () => {
-        return content.split(" ").length - 1;
-      };
+      // const getWordCount = () => {
+      //   console.log(content);
+      //   // return content.split(" ").length - 1;
+      // };
       const handleCopy = () => {
         if (content.length > 0) {
           navigator.clipboard.writeText(content);
@@ -35,13 +41,19 @@ const QuillEditor = dynamic(
           forwardedRef.current.editor.getLength()
         );
       };
+      const handleContent = async (e) => {
+        console.log(e.getText());
+        changeContent((i) => e);
+      };
       return (
         <div className={styles.text_editor_container}>
           <div>
             <RQ
               ref={forwardedRef}
               {...props}
-              onChange={(e) => console.log(e)}
+              theme="snow"
+              onChange={() => handleContent(forwardedRef.current.editor)}
+              modules={modules}
             />
           </div>
           <div className={styles.editor_menu}>
