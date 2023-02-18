@@ -1,2 +1,10 @@
 User-agent: *
-allow: /
+
+Disallow: /articles/wp-admin/
+Disallow: /articles/wp-content/plugins/
+Disallow: /articles/?s=*
+Disallow: */feed/
+Disallow: /articles/search/*
+Disallow: /articles/ct_content_block/*
+
+Sitemap: https://contentdetector.ai/sitemap.xml
