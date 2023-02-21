@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Free AI Content Detector - Detect ChatGPT Plagiarism</title>
+        <title>AI Content Detector - Detect ChatGPT Plagiarism</title>
         <meta
           name="description"
           content="ContentDetector.AI is a free AI and ChatGPT plagiarism detector with a word counter for bloggers academicians"

@@ -12,7 +12,7 @@ function OurMotive({ styles }) {
           className={`${styles.padding_vertical_lg} ${styles.margin_horizontal_sm} `}
         >
           <p className={`${styles.sub_heading} ${styles.margin_horizontal_md}`}>
-            Best Free AI content and ChatGPT Plagiarism Detector
+            Best AI content Detector and ChatGPT Plagiarism Detector
           </p>
           <div className={styles.layout_spacing}>
             <p className={styles.section_desc}>
@@ -25,9 +25,10 @@ function OurMotive({ styles }) {
             </p>
             <p className={styles.section_desc}>
               This online AI content detector is not only easy to use but also
-              has a lot of functionality. It is a ChatGPT plagiarism detector, a
-              GPT 3 content detector, and a Jarvis AI content detector. You only
-              need to copy and paste the content into the text field to check.
+              has a lot of functionality and most importantly, it's a free AI
+              content detector. It is a ChatGPT plagiarism detector, a GPT 3
+              content detector, and a Jarvis AI content detector. You only need
+              to copy and paste the content into the text field to check.
             </p>
             <p className={styles.section_desc}>
               Thousands of users like our application, and it is used by
