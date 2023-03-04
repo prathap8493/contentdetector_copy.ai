@@ -25,14 +25,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomeHeading styles={styles} />
-      <Playground styles={styles} />
-      {/* <Features styles={styles} /> */}
+      <div>
+        <HomeHeading styles={styles} />
+        <Playground styles={styles} />
+        {/* <Features styles={styles} /> */}
 
-      <OurMotive styles={styles} />
+        <OurMotive styles={styles} />
 
-      {/* <UseCases styles={styles} /> */}
-      <Faq styles={styles} />
+        {/* <UseCases styles={styles} /> */}
+        <Faq styles={styles} />
+      </div>
     </>
   );
 }

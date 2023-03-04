@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useQuill } from "react-quilljs";
 import { BiCopy } from "react-icons/bi";
 import { MdDeleteOutline } from "react-icons/md";
@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { Button } from "@mui/material";
 import ProgressBar from "../common/ProgressBar";
 import { aiDetectionService } from "@/services/home";
+import ResponseContainer from "./ResponseContainer";
 
 function Playground({ styles }) {
   const formats = ["header", "size", "bold", "italic", "underline", "strike"];
@@ -27,12 +28,33 @@ function Playground({ styles }) {
     placeholder,
   });
   const [content, setContent] = useState("");
-  const [percenage, setPercenage] = useState(0);
+  const [percentage, setpercentage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [initialEditorHeight, setInitialEditorHeight] = useState(0);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    if (quillRef?.current?.offsetHeight > window.innerHeight * 0.5) {
+      console.log("enter");
+      divRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+      });
+    } else if (content.length < 2) {
+      // quillRef.current.scrollIntoView({
+      //   behavior: "smooth",
+      //   block: "end",
+      //   inline: "nearest",
+      // });
+      window.scrollTo(0, 0);
+    }
+    console.log(content.length);
+  }, [quillRef?.current?.offsetHeight]);
 
   useEffect(() => {
     if (quill) {
-      quill.focus();
+      // quill.focus();
       quill.on("text-change", (delta, oldDelta, source) => {
         setContent(quill.getText());
       });
@@ -59,7 +81,6 @@ function Playground({ styles }) {
 
   // word count
   const getWordCount = () => {
-    console.log(content.trim());
     return content.replace(/\n/g, " ").trim().split(" ").length - 1;
   };
 
@@ -67,22 +88,25 @@ function Playground({ styles }) {
   const analiseContent = async () => {
     setLoading(true);
     try {
-      const data = await aiDetectionService({ content });
+      const { data } = await aiDetectionService({ content });
+      console.log(data);
       const fakePercentage = data?.fake_probability * 100 || 0;
-      setPercenage(fakePercentage.toFixed(1));
+      setpercentage(fakePercentage.toFixed(1));
       setLoading(false);
     } catch (err) {
       setLoading(false);
+      console.log(err);
       toast.error("Something went wrong! Try again", { duration: 1300 });
     }
   };
+
   return (
     <div className={`${styles.playground_container} ${styles.layout_spacing}`}>
       <div className={styles.editor_container}>
         <div className={styles.text_editor_container}>
-          <div>
-            <div ref={quillRef} className={styles.text_editor} />
-          </div>
+          {/* <div> */}
+          <div ref={quillRef} className={styles.text_editor} />
+          {/* </div> */}
 
           <div className={styles.editor_menu}>
             {/* word count */}
@@ -100,7 +124,7 @@ function Playground({ styles }) {
             </div>
           </div>
         </div>
-        <div className={styles.action_container}>
+        <div className={styles.action_container} ref={divRef}>
           <Button
             className={
               loading
@@ -121,13 +145,11 @@ function Playground({ styles }) {
       </div>
 
       {/* response container */}
-      <div className={styles.response_container}>
-        <div className={styles.ai_response}>
-          <p className={styles.ai_percentage}>{percenage}%</p>
-          <p className={styles.ai_sub_text}>Match with AI</p>
-          <ProgressBar percenage={percenage} loading={loading} />
-        </div>
-      </div>
+      <ResponseContainer
+        styles={styles}
+        percentage={percentage}
+        loading={loading}
+      />
     </div>
   );
 }
