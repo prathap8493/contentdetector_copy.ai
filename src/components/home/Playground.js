@@ -9,12 +9,13 @@ import { aiDetectionService } from "@/services/home";
 import ResponseContainer from "./ResponseContainer";
 
 function Playground({ styles }) {
-  const formats = ["header", "size", "bold", "italic", "underline", "strike"];
+  // const formats = ["header", "size", "bold", "italic", "underline", "strike"];
   const modules = {
-    toolbar: [
-      [{ header: [1, 2, 3, 4, 5, 6, false] }],
-      ["bold", "italic", "underline", "strike"],
-    ],
+    // toolbar: [
+    //   [{ header: [1, 2, 3, 4, 5, 6, false] }],
+    //   ["bold", "italic", "underline", "strike"],
+    // ],
+    toolbar: false,
     clipboard: {
       matchVisual: false,
     },
@@ -24,7 +25,6 @@ function Playground({ styles }) {
   const { quill, quillRef } = useQuill({
     theme,
     modules,
-    formats,
     placeholder,
   });
   const [content, setContent] = useState("");
@@ -54,7 +54,7 @@ function Playground({ styles }) {
 
   useEffect(() => {
     if (quill) {
-      // quill.focus();
+      quill.focus();
       quill.on("text-change", (delta, oldDelta, source) => {
         setContent(quill.getText());
       });
