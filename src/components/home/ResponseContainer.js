@@ -25,7 +25,7 @@ function ResponseContainer({ styles, percentage, loading }) {
       });
     if (percentage > 50)
       return setScoreTheme({
-        text: "Medium AI Probability",
+        text: "Very High AI Probability",
         color: "#D04B45",
       });
   };
