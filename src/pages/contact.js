@@ -9,7 +9,7 @@ function Contact() {
         <title>Contact Us | ContentDetector.AI</title>
         <meta
           name="description"
-          content="ContentDetector.AI is a free AI and ChatGPT plagiarism detector with a word counter for bloggers academicians"
+          content="ContentDetector.AI is a free AI content detector and ChatGPT Plagiarism detector that can detect any Chat GPT generate content and AI generated content or text"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
