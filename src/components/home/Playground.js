@@ -9,22 +9,20 @@ import { aiDetectionService } from "@/services/home";
 import ResponseContainer from "./ResponseContainer";
 
 function Playground({ styles }) {
-  // const formats = ["header", "size", "bold", "italic", "underline", "strike"];
+  const formats = ["header", "size", "bold", "italic", "underline", "strike"];
   const modules = {
     // toolbar: [
     //   [{ header: [1, 2, 3, 4, 5, 6, false] }],
     //   ["bold", "italic", "underline", "strike"],
     // ],
     toolbar: false,
-    clipboard: {
-      matchVisual: false,
-    },
   };
   const theme = "snow";
   const placeholder = "Paste Text or Write Here";
   const { quill, quillRef } = useQuill({
     theme,
     modules,
+    formats,
     placeholder,
   });
   const [content, setContent] = useState("");
