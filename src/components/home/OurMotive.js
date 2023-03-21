@@ -14,7 +14,7 @@ function OurMotive({ styles }) {
           <h2
             className={`${styles.sub_heading} ${styles.margin_horizontal_md}`}
           >
-            Best AI content Detector and ChatGPT Plagiarism Detector
+            Best AI Content Detector and ChatGPT Plagiarism Detector
           </h2>
           <div className={styles.layout_spacing}>
             <p className={styles.section_desc}>
