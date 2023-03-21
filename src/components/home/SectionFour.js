@@ -31,18 +31,17 @@ function SectionFour({ styles }) {
         <div
           className={`${styles.section_content_container} ${styles.margin_top_md}`}
         >
-          <p className={styles.sub_heading}>AI Detector for Academicians</p>
+          <h2 className={styles.sub_heading}>
+            AI Content Detector for Academicians
+          </h2>
           <p className={styles.section_desc}>
-            Academicians and Universities can use the tool to check the essays
-            submitted by students are authentic or not. Just copy paste the
-            content into the text box and click on analyse to detect any fake
-            content. This can be a very handy free tool for education especially
-            for teacher.
+            Academicians and universities may utilize the tool to determine
+            whether the essays provided by students are legitimate. Simply copy
+            and paste the material into the text field and click on “analyze” to
+            identify any bogus information. This may be a useful free
+            educational tool, particularly for teachers.
           </p>
-          <p className={styles.section_desc}>
-            ContentDetector.AI also acts a simple word counter. Just copy paste
-            the text to know the number of words are in the text
-          </p>
+
           {/* <Button className={`${styles.analyse_btn} ${styles.margin_top_md}`}>
             Analyse
           </Button> */}

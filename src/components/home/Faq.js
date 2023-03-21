@@ -12,7 +12,7 @@ const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   marginTop: "10px",
-  padding: "5px",
+  padding: "0 5px",
   borderRadius: "10px",
   border: `1px solid #00000029`,
   boxShadow: "1px 1px 4px #00000029",

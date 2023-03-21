@@ -432,7 +432,7 @@
   width: 80%;
 }
 .accordion_title {
-  font: normal normal normal 18px/28px nunito;
+  font: normal normal normal 18px nunito;
   letter-spacing: 0.4px;
   margin-left: 10px;
 }
